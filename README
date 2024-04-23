@@ -2,3 +2,11 @@ Open Chrome and go to chrome://extensions/.
 Enable Developer Mode.
 Click "Load unpacked" and select your extension directory.
 Make sure to replace "YOUR_API_KEY_HERE" with your actual OpenAI API key in background.js.
+
+If ypu don't want to make requests, replace everything in background.js with:
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
+    if (request.action === "translateAndDefine") {
+        sendResponse({ response: "Test response, no API call made" });
+    }
+});
