@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     if (request.action === "translateAndDefine") {
         const word = request.word;
-        const apiKey = 'sk-proj-9pduhKY2PdxDkQVtWUa0T3BlbkFJ1VRqwPII8kHkjxYEOv5i';
+        const apiKey = 'YOUR_API_KEY'; // Replace with your OpenAI API key
 
         fetch('https://api.openai.com/v1/chat/completions', {
             method: 'POST',
