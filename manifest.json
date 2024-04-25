@@ -10,7 +10,8 @@
   ],
   "host_permissions": [
     "http://*/*",
-    "https://*/*"
+    "https://*/*",
+    "https://texttospeech.googleapis.com/*"
   ],
   "background": {
     "service_worker": "background.js"
@@ -27,5 +28,11 @@
   },
   "icons": {
     "48": "icon48.jpeg"
-  }
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [ "wordinfo.html", "megaphone-fill.svg" ],
+      "matches": [ "<all_urls>" ]
+    }
+  ]
 }
